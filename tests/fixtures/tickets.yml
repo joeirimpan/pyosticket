@@ -1,0 +1,26 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.21.0]
+    method: GET
+    uri: https://osticket-test.company.com/api/tickets/all?email=nibba%40nibba.com
+  response:
+    body: {string: '[{"number":"XXXXXXXXXXXXXX","status":"closed","thread_count":2,"created":"","updated":"","subject":"Why is my order getting
+        rejected?"},{"number":"XXXXXXXXXXXXXX","status":"closed","thread_count":2,"created":"","updated":"","subject":"What does CNC, MIS and
+        NRML mean?"},{"number":"XXXXXXXXXXXXXX","status":"closed","thread_count":2,"created":"","updated":"","subject":"Should I send any documents
+        if I open my account online?"},{"number":"XXXXXXXXXXXXXX","status":"closed","thread_count":2,"created":"","updated":"","subject":"How do I open an account
+        online?"}]'}
+    headers:
+      Cache-Control: ['no-store, no-cache, must-revalidate']
+      Content-Length: ['715']
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Thu, 03 Jan 2019 07:52:42 GMT']
+      Expires: ['Thu, 19 Nov 1981 08:52:00 GMT']
+      Pragma: [no-cache]
+      Server: [nginx/1.10.3 (Ubuntu)]
+    status: {code: 200, message: OK}
+version: 1
