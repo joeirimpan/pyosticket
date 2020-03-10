@@ -27,7 +27,8 @@ class TicketModel(object):
 
     __slots__ = [
         "source", "name", "email", "ip",
-        "subject", "topic_id", "attachments"
+        "subject", "topic_id", "attachments",
+        "message", "phone", "alert", "autorespond"
     ]
 
     def __init__(self, name, email, subject, topic_id, attachments, **kwargs):
@@ -38,6 +39,10 @@ class TicketModel(object):
         self.subject = subject
         self.topic_id = topic_id
         self.attachments = attachments
+        self.message = kwargs.get("message", "")
+        self.message = kwargs.get("phone", None)
+        self.message = kwargs.get("alert", True)
+        self.message = kwargs.get("autorespond", True)
 
     def to_dict(self):
         return {
@@ -48,7 +53,10 @@ class TicketModel(object):
             "subject": self.subject,
             "topicId": self.topic_id,
             "message": self.message,
-            "attachments": self.attachments
+            "attachments": self.attachments,
+            "alert": self.alert,
+            "autorespond": self.autorespond,
+            "phone": self.phone
         }
 
 
